@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll: El Musical | La Superproducción del Año</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Precarga de fuentes: una serif pretenciosa y una sans-serif grotesca para los glitches -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación pegajosa. Te persigue por toda la página, como el FOMO -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#sinopsis">La Obra</a></li>
+            <li><a href="#galeria">Media</a></li>
+            <li><a href="#entradas">Tickets</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor inmenso y abrumador. El usuario debe sentirse pequeño ante la pantalla -->
+    <header id="hero">
+        <div class="hero-content">
+            <!-- Espacio para el logo que luego destruiremos con CSS puro -->
+            <h1 class="glitch-logo" data-text="SCROLL: EL MUSICAL">SCROLL: EL MUSICAL</h1>
+            <p class="subtitle">Una experiencia teatral inmersiva... o lo que aguante tu atención.</p>
+            
+            <!-- Contenedor de enjambre de notificaciones (se animarán con CSS en el futuro) -->
+            <div class="notification-swarm" aria-hidden="true">
+                <span class="fake-badge">99+</span>
+                <span class="fake-badge">¡NUEVO!</span>
+            </div>
+
+            <!-- Botón de compra: Elegante pero pasivo-agresivo -->
+            <a href="#entradas" class="cta-broadway">COMPRAR ENTRADAS AHORA</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de lectura. Spoiler: nadie va a leer esto entero. -->
+        <section id="sinopsis" class="section-padding">
+            <article class="theatrical-text">
+                <h2>Una epopeya sobre la desconexión</h2>
+                <p>Sumérgete en la opulencia de nuestra gran vía digital. Un espectáculo sin precedentes donde la tragedia humana se mide en <em>likes</em> y el drama se resuelve antes de que puedas hacer el siguiente <em>swipe</em>.</p>
+            </article>
+
+            <!-- Ficha técnica cruda y brutal -->
+            <article class="tech-sheet">
+                <h3>Ficha Técnica</h3>
+                <ul>
+                    <!-- Guiño teatral: 10 minutos de obra, 15 de intermedio. Un insulto al teatro clásico. -->
+                    <li><strong>Duración del Acto I:</strong> 4 minutos.</li>
+                    <li><strong>Intermedio:</strong> 15 minutos (Para revisar tus redes, sabemos que lo necesitas).</li>
+                    <li><strong>Duración del Acto II:</strong> 6 minutos.</li>
+                    <li><strong>Formato Escénico:</strong> 9:16 Estricto.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Galería de estímulos visuales rápidos -->
+        <section id="galeria" class="section-padding dark-bg">
+            <h2>El Espectáculo en Imágenes</h2>
+            
+            <!-- Carrusel CSS Scroll-Snap: Perfecto para la memoria muscular de deslizar en el móvil -->
+            <div class="scroll-carousel">
+                <!-- Tarjetas vacías preparadas para el contenido -->
+                <div class="carousel-item">Foto Glamurosa 1</div>
+                <div class="carousel-item">Glitch Inesperado 2</div>
+                <div class="carousel-item">Foto Glamurosa 3</div>
+                <div class="carousel-item">Meme Corporativo 4</div>
+            </div>
+
+            <!-- Contenedores multimedia para sobreestimular al usuario -->
+            <div class="multimedia-containers">
+                <!-- Contenedor para vídeo (Auto-play silenciado para molestar) -->
+                <div class="video-wrapper">
+                    <video poster="placeholder.jpg" muted loop playsinline>
+                        <!-- <source src="trailer-ansiedad.mp4" type="video/mp4"> -->
+                    </video>
+                </div>
+                <!-- Contenedor de audio (Podcast o nota de voz frenética) -->
+                <div class="audio-wrapper">
+                    <audio controls>
+                        <!-- <source src="nota-de-voz-del-director.mp3" type="audio/mpeg"> -->
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuadrícula de ansiedad capitalista: ¡Compra, compra, compra! -->
+        <section id="entradas" class="section-padding">
+            <h2>Pases Disponibles</h2>
+            <div class="grid-entradas">
+                <!-- Entradas diseñadas con Flexbox/Grid -->
+                <article class="ticket-card sold-out">
+                    <h3>Viernes 20:00</h3>
+                    <p class="status">AGOTADO (Llegaste tarde, como siempre)</p>
+                </article>
+                <article class="ticket-card available">
+                    <h3>Sábado 18:00</h3>
+                    <p class="status">ÚLTIMAS 2 ENTRADAS</p>
+                    <button class="buy-btn">PAGAR CON TU ALMA</button>
+                </article>
+                <article class="ticket-card available">
+                    <h3>Sábado 22:00</h3>
+                    <p class="status">DISPONIBLE</p>
+                    <button class="buy-btn">COMPRAR</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Acordeón semántico sin JS. Preguntas reales, respuestas sarcásticas. -->
+        <section id="faq" class="section-padding dark-bg">
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+            <div class="accordion-container">
+                <details>
+                    <summary>¿Se puede usar el móvil durante la obra?</summary>
+                    <p>No solo se puede, es obligatorio. Si no publicas que estás aquí, ¿realmente viniste?</p>
+                </details>
+                <details>
+                    <summary>¿Por qué dura tan poco el musical?</summary>
+                    <p>Los estudios de mercado indican que tu cerebro ya no puede procesar una obra de tres horas al estilo de <em>Los Miserables</em>. De nada.</p>
+                </details>
+                <details>
+                    <summary>¿Hay código de vestimenta?</summary>
+                    <p>Ven como quieras, total, la iluminación del escenario te va a deslumbrar tanto que nadie te verá.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer corporativo estéril -->
+    <footer>
+        <p>&copy; 2026 Scroll Factory Productions. Todos los derechos reservados.</p>
+        <p class="fine-print">Al navegar por esta web aceptas que vendamos tus datos de atención al mejor postor.</p>
+    </footer>
+
+</body>
+</html>
