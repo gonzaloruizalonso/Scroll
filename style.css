@@ -12,7 +12,7 @@
     --color-azul-twitter: #1da1f2;
     --color-rojo-noti: #ff0033;
     --color-verde-toxico: #00ff66;
-    
+
     /* Tipografías */
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
@@ -36,18 +36,22 @@ html {
 body {
     background-color: var(--color-oscuridad);
     color: var(--color-texto-elegante);
-    font-family: var(--font-serif); /* Base elegante */
+    font-family: var(--font-serif);
+    /* Base elegante */
     line-height: 1.6;
-    overflow-x: hidden; /* Evitar scroll horizontal indeseado */
+    overflow-x: hidden;
+    /* Evitar scroll horizontal indeseado */
 }
 
 /* Utilidades de espaciado */
 .section-padding {
-    padding: 4rem 1.5rem; /* Mobile first padding */
+    padding: 4rem 1.5rem;
+    /* Mobile first padding */
 }
 
 .dark-bg {
-    background-color: #050505; /* Un negro aún más abismal */
+    background-color: #050505;
+    /* Un negro aún más abismal */
 }
 
 /* ==========================================================================
@@ -58,7 +62,8 @@ body {
     top: 0;
     z-index: 1000;
     background: rgba(15, 15, 17, 0.9);
-    backdrop-filter: blur(10px); /* Toque moderno/iOS */
+    backdrop-filter: blur(10px);
+    /* Toque moderno/iOS */
     border-bottom: 1px solid var(--color-dorado-falso);
 }
 
@@ -72,7 +77,8 @@ body {
 .sticky-nav a {
     color: var(--color-dorado-falso);
     text-decoration: none;
-    font-family: var(--font-sans); /* La UI empieza a ser fría y digital */
+    font-family: var(--font-sans);
+    /* La UI empieza a ser fría y digital */
     font-size: 0.8rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -83,7 +89,8 @@ body {
    HERO: El Ataque Visual
    ========================================================================== */
 #hero {
-    height: 100vh; /* Ocupa toda la pantalla, no hay escapatoria */
+    height: 100vh;
+    /* Ocupa toda la pantalla, no hay escapatoria */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,6 +99,41 @@ body {
     position: relative;
     background: linear-gradient(135deg, var(--color-oscuridad) 40%, var(--color-terciopelo) 100%);
     padding: 2rem;
+}
+
+/* El contenedor del H1 maneja el espacio y los márgenes */
+.main-logo-container {
+    width: 95%;
+    max-width: 100%;
+    /* Ocupa casi todo el ancho en móvil */
+    margin: 0 auto 2rem auto;
+    /* Centrado y con margen inferior para separarlo del subtítulo */
+    display: flex;
+    justify-content: center;
+}
+
+/* La imagen en sí ocupa todo el contenedor y le damos un toque dramático */
+.glitch-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Le metemos un resplandor dorado sutil para simular las luces de la Gran Vía */
+    filter: drop-shadow(0 15px 25px rgba(212, 175, 55, 0.25));
+    transition: transform 0.3s ease;
+    /* Preparando el terreno para futuras animaciones */
+}
+
+/* Media Query: ¡Aquí es donde lo hacemos gigante para la versión de Escritorio! */
+@media (min-width: 768px) {
+    .main-logo-container {
+        max-width: 1800px;
+        /* Le damos vía libre para crecer en monitores grandes */
+    }
+
+    .glitch-logo-img {
+        /* Aumentamos un poco el resplandor en escritorio porque tenemos más espacio */
+        filter: drop-shadow(0 20px 35px rgba(212, 175, 55, 0.35));
+    }
 }
 
 .glitch-logo {
@@ -147,6 +189,21 @@ body {
     border-color: var(--color-dorado-falso);
 }
 
+.cta-broadway img {
+    max-width: 150px;
+    /* Tamaño más pequeño para la imagen del botón */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.glitch-boton-img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* ==========================================================================
    SINOPSIS & FICHA TÉCNICA
    ========================================================================== */
@@ -167,9 +224,10 @@ body {
 }
 
 .tech-sheet {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 2rem;
-    border-left: 4px solid var(--color-rojo-noti); /* El primer choque visual agresivo */
+    border-left: 4px solid var(--color-rojo-noti);
+    /* El primer choque visual agresivo */
 }
 
 .tech-sheet h3 {
@@ -200,20 +258,24 @@ body {
 .scroll-carousel {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Magia CSS: obliga a detenerse en cada tarjeta */
+    scroll-snap-type: x mandatory;
+    /* Magia CSS: obliga a detenerse en cada tarjeta */
     gap: 1rem;
     padding-bottom: 1rem;
     /* Ocultar barra de scroll para que parezca app nativa */
-    scrollbar-width: none; 
+    scrollbar-width: none;
+    align-items: center;
 }
 
 .scroll-carousel::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
 .carousel-item {
-    flex: 0 0 80%; /* Ocupa el 80% de la pantalla móvil, dejando asomar la siguiente */
-    height: 400px;
+    flex: 0 0 80%;
+    /* Ocupa el 80% de la pantalla móvil, dejando asomar la siguiente */
+    aspect-ratio: 1 / 1;
+    height: auto;
     background-color: #222;
     scroll-snap-align: center;
     display: flex;
@@ -223,6 +285,13 @@ body {
     border-radius: 8px;
     font-family: var(--font-sans);
     color: #555;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .multimedia-containers {
@@ -233,9 +302,17 @@ body {
 
 .video-wrapper {
     width: 100%;
-    aspect-ratio: 9/16; /* Formato vertical estricto */
+    aspect-ratio: 16/9;
+    /* Formato horizontal */
     background-color: #111;
-    border: 2px solid var(--color-azul-twitter); /* Invasión de la red social */
+    border: 2px solid var(--color-azul-twitter);
+    /* Invasión de la red social */
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .audio-wrapper {
@@ -243,6 +320,11 @@ body {
     padding: 1rem;
     background: #222;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 /* ==========================================================================
@@ -256,7 +338,8 @@ body {
 
 .grid-entradas {
     display: grid;
-    grid-template-columns: 1fr; /* Mobile first: 1 columna */
+    grid-template-columns: 1fr;
+    /* Mobile first: 1 columna */
     gap: 1.5rem;
 }
 
@@ -337,7 +420,8 @@ summary {
     font-family: var(--font-sans);
     font-weight: bold;
     cursor: pointer;
-    list-style: none; /* Eliminar flecha por defecto */
+    list-style: none;
+    /* Eliminar flecha por defecto */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -388,17 +472,26 @@ footer {
     }
 
     .grid-entradas {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en escritorio */
     }
 
     .multimedia-containers {
-        grid-template-columns: 1fr 1fr; /* Dividir video y audio en 2 columnas */
+        grid-template-columns: 1fr 1fr;
+        /* Dividir video y audio en 2 columnas */
     }
-    
+
     .carousel-item {
-        flex: 0 0 40%; /* Tarjetas más pequeñas en pantallas grandes */
+        flex: 0 0 35%;
+        /* Crecerá proporcionalmente con la pantalla */
     }
-    
+
+    .glitch-boton-img {
+        max-width: 25%;
+        /* Disminuirá proporcionalmente con la pantalla */
+
+    }
+
     /* El hero en escritorio debe sentirse opresivo pero con más espacio respirable */
     .glitch-logo {
         font-size: 5rem;
