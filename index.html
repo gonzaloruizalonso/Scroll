@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll: El Musical | La Superproducción del Año</title>
     <link rel="stylesheet" href="style.css">
     <!-- Precarga de fuentes: una serif pretenciosa y una sans-serif grotesca para los glitches -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Navegación pegajosa. Te persigue por toda la página, como el FOMO -->
@@ -23,19 +27,19 @@
 
     <!-- Contenedor inmenso y abrumador. El usuario debe sentirse pequeño ante la pantalla -->
     <header id="hero">
+        <h1 class="main-logo-container">
+            <img src="./img/logo.png" alt="Scroll: El Musical" class="glitch-logo-img">
+        </h1>
         <div class="hero-content">
             <!-- Espacio para el logo que luego destruiremos con CSS puro -->
-            <h1 class="glitch-logo" data-text="SCROLL: EL MUSICAL">SCROLL: EL MUSICAL</h1>
-            <p class="subtitle">Una experiencia teatral inmersiva... o lo que aguante tu atención.</p>
-            
-            <!-- Contenedor de enjambre de notificaciones (se animarán con CSS en el futuro) -->
-            <div class="notification-swarm" aria-hidden="true">
-                <span class="fake-badge">99+</span>
-                <span class="fake-badge">¡NUEVO!</span>
-            </div>
+            <p class="subtitle">El musical que dura menos que tu capacidad de atención.
+                <br>Producido por Musicales LOL.
+                Teatro El Latino, Madrid.
+            </p>
+
 
             <!-- Botón de compra: Elegante pero pasivo-agresivo -->
-            <a href="#entradas" class="cta-broadway">COMPRAR ENTRADAS AHORA</a>
+            <a href="#entradas"><img src="./img/boton.png" class="glitch-boton-img" alt="COMPRAR"></a>
         </div>
     </header>
 
@@ -44,48 +48,93 @@
         <section id="sinopsis" class="section-padding">
             <article class="theatrical-text">
                 <h2>Una epopeya sobre la desconexión</h2>
-                <p>Sumérgete en la opulencia de nuestra gran vía digital. Un espectáculo sin precedentes donde la tragedia humana se mide en <em>likes</em> y el drama se resuelve antes de que puedas hacer el siguiente <em>swipe</em>.</p>
+                <p>Te invitamos a experimentar el espectáculo más moderno y atrevido de la cartelera actual. Scroll es
+                    un viaje absorbente que celebra, sin complejos, cómo nos hemos dejado llevar felizmente por las
+                    redes sociales y todo lo que nos dicta el algoritmo. Prepárate para una sobredosis de
+                    entretenimiento rápido y constante, un espectáculo en formato vertical lleno de recompensas
+                    instantáneas donde no hace falta pensar, solo mirar. Es la experiencia teatral definitiva para
+                    nuestra época: el placer de tener la mente en blanco, consumiendo contenido sin parar y olvidándolo
+                    al segundo siguiente para pasar a lo nuevo.</p>
             </article>
 
             <!-- Ficha técnica cruda y brutal -->
             <article class="tech-sheet">
-                <h3>Ficha Técnica</h3>
+                <h3>Ficha Técnica SCROLL: EL MUSICAL</h3>
                 <ul>
                     <!-- Guiño teatral: 10 minutos de obra, 15 de intermedio. Un insulto al teatro clásico. -->
-                    <li><strong>Duración del Acto I:</strong> 4 minutos.</li>
-                    <li><strong>Intermedio:</strong> 15 minutos (Para revisar tus redes, sabemos que lo necesitas).</li>
-                    <li><strong>Duración del Acto II:</strong> 6 minutos.</li>
-                    <li><strong>Formato Escénico:</strong> 9:16 Estricto.</li>
+                    <li><strong>Duración del Acto I:</strong> 10 minutos. Hemos eliminado todo el aburrimiento, las
+                        escenas largas y el complejo desarrollo de personajes. Es puro contenido directo, rápido y al
+                        grano, diseñado para que no te canses pensando.</li>
+                    <li><strong>Intermedio:</strong> 15 minutos. Una pausa estratégicamente pensada para que puedas
+                        sacar el móvil sin culpa. Calma tu ansiedad por estar desconectado, revisa tus notificaciones y
+                        asegura tus rachas diarias en redes sociales.</li>
+                    <li><strong>Duración del Acto II:</strong> 10 minutos.</li>
+                    <li><strong>Formato Escénico:</strong> 9:16 Estricto. Todo ocurre en una franja estrecha, idéntica a
+                        la pantalla de tu teléfono. Te obliga a mantener la misma postura que cuando miras el móvil,
+                        resultando tremendamente cómodo y familiar para tu cuello.</li>
+                    <li><strong>Efectos especiales:</strong> Interrupciones fuertes y constantes diseñadas para
+                        sacudirte en la butaca. Son el estímulo perfecto para evitar que te aburras, ideales para un
+                        público al que ya le cuesta prestar atención a una sola cosa.
+                    </li>
                 </ul>
+                <h3>Duración total estimada: 35 minutos, no te preocupes por perderte algo importante, te lo
+                    contaremos en el resumen de 5 segundos que subiremos al final en Instagram.</h3>
             </article>
         </section>
 
         <!-- Galería de estímulos visuales rápidos -->
         <section id="galeria" class="section-padding dark-bg">
             <h2>El Espectáculo en Imágenes</h2>
-            
+
             <!-- Carrusel CSS Scroll-Snap: Perfecto para la memoria muscular de deslizar en el móvil -->
             <div class="scroll-carousel">
                 <!-- Tarjetas vacías preparadas para el contenido -->
-                <div class="carousel-item">Foto Glamurosa 1</div>
-                <div class="carousel-item">Glitch Inesperado 2</div>
-                <div class="carousel-item">Foto Glamurosa 3</div>
-                <div class="carousel-item">Meme Corporativo 4</div>
+                <div class="carousel-item">
+                    <img src="./img/img1.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img2.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/img3.png" alt="">
+                </div>
             </div>
+            <br>
+            <br>
 
             <!-- Contenedores multimedia para sobreestimular al usuario -->
+            <h2>El Espectáculo en Vídeos</h2>
             <div class="multimedia-containers">
-                <!-- Contenedor para vídeo (Auto-play silenciado para molestar) -->
+                <!-- Contenedor para vídeo  -->
                 <div class="video-wrapper">
-                    <video poster="placeholder.jpg" muted loop playsinline>
-                        <!-- <source src="trailer-ansiedad.mp4" type="video/mp4"> -->
+                    <video controls loop playsinline>
+                        <source src="./video/trailer.mp4" type="video/mp4">
                     </video>
                 </div>
-                <!-- Contenedor de audio (Podcast o nota de voz frenética) -->
+                <!-- Contenedor para vídeo  -->
+                <div class="video-wrapper">
+                    <video controls loop playsinline>
+                        <source src="./video/teaser.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h2>El Espectáculo en Sonido</h2>
+            <div class="multimedia-containers">
+                <!-- Contenedor de audio (Canción principal) -->
                 <div class="audio-wrapper">
                     <audio controls>
-                        <!-- <source src="nota-de-voz-del-director.mp3" type="audio/mpeg"> -->
+                        <source src="./mp3/SKIP-AD.mp3" type="audio/mpeg">
                     </audio>
+                    <p>Canción: SKIP-AD</p>
+                </div>
+                <!-- Contenedor de audio  -->
+                <div class="audio-wrapper">
+                    <audio controls>
+                        <source src="./mp3/SCROLL.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>Canción: SCROLL</p>
                 </div>
             </div>
         </section>
@@ -117,16 +166,32 @@
             <h2>Preguntas Frecuentes (FAQ)</h2>
             <div class="accordion-container">
                 <details>
-                    <summary>¿Se puede usar el móvil durante la obra?</summary>
-                    <p>No solo se puede, es obligatorio. Si no publicas que estás aquí, ¿realmente viniste?</p>
+                    <summary>¿Debo apagar o silenciar mi teléfono móvil durante el espectáculo?</summary>
+                    <p>Bajo ningún concepto. De hecho, está terminantemente prohibido desconectar sus dispositivos.
+                        Scroll: El Musical está diseñado como una experiencia inmersiva de dopamina, y apagar el móvil
+                        durante la función arruinaría de forma irreparable su algoritmo y sus preciadas métricas de
+                        interacción diarias. Por favor, mantenga el brillo al máximo; la contaminación lumínica de sus
+                        pantallas individuales es parte estructural de nuestro diseño de iluminación para el Acto II.
+                    </p>
                 </details>
                 <details>
                     <summary>¿Por qué dura tan poco el musical?</summary>
-                    <p>Los estudios de mercado indican que tu cerebro ya no puede procesar una obra de tres horas al estilo de <em>Los Miserables</em>. De nada.</p>
+                    <p>Los estudios de mercado indican que tu cerebro ya no puede procesar una obra de tres horas al
+                        estilo de <em>Los Miserables</em>. De nada.</p>
                 </details>
                 <details>
                     <summary>¿Hay código de vestimenta?</summary>
-                    <p>Ven como quieras, total, la iluminación del escenario te va a deslumbrar tanto que nadie te verá.</p>
+                    <p>Ven como quieras, total, la iluminación del escenario te va a deslumbrar tanto que nadie te verá.
+                    </p>
+                </details>
+                <details>
+                    <summary>¿Está permitido grabar o hacer fotos durante el espectáculo?</summary>
+                    <p>Más que permitido, es un requisito contractual tácito. Si usted asiste a Scroll: El Musical y no
+                        genera al menos tres piezas de contenido efímero validando nuestra marca, consideraremos que su
+                        presencia física ha sido irrelevante. Grabe todo, no mire absolutamente nada directamente con
+                        sus propios ojos y, por favor, recuerde etiquetarnos para que podamos capitalizar su validación
+                        social.
+                    </p>
                 </details>
             </div>
         </section>
@@ -134,9 +199,10 @@
 
     <!-- Footer corporativo estéril -->
     <footer>
-        <p>&copy; 2026 Scroll Factory Productions. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Musicales LOL. Todos los derechos reservados.</p>
         <p class="fine-print">Al navegar por esta web aceptas que vendamos tus datos de atención al mejor postor.</p>
     </footer>
 
 </body>
+
 </html>
